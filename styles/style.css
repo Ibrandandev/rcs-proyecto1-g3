@@ -50,6 +50,10 @@ iframe {
   place-items: center;
 }
 
+.premio img {
+  height: 350px;
+}
+
 @media screen and (min-width: 768px) {
   iframe {
     height: 52vh;
