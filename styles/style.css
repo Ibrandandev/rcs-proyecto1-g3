@@ -18,3 +18,11 @@ iframe {
   width: 2rem;
   height: 2rem;
 }
+
+.card-img-top {
+  height: 400px;
+}
+
+.card-prize {
+  width: 410px;
+}
