@@ -1,7 +1,11 @@
 .img img {
-  width: 350px;
-  height: 500px;
+  width: 120px;
+  height: 200px;
 }
+.login-borde {
+  border-top: 1px solid;
+}
+
 .login {
   width: 310px;
 }
@@ -14,4 +18,18 @@
 .btn {
   text-align: center;
   width: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .login-borde {
+    border-top: none;
+    border-right: 1px solid;
+  }
+  .login {
+    width: 380px;
+  }
+  .img img {
+    width: 350px;
+    height: 500px;
+  }
 }
