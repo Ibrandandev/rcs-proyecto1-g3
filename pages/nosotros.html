@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,77 +14,540 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/nosotros.css" />
   </head>
-  <body class="d-flex flex-column vh-100">
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container">
-          <a class="navbar-brand text-light" href="index.html">Navbar</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+  <body class="d-flex flex-column min-vh-100">
+    <div class="modal text-light" tabindex="-1" id="register">
+      <div class="modal-dialog">
+        <div class="modal-content p-3 bg-dark">
+          <div class="modal-header borderModal">
+            <h5 class="modal-title">Registrarse</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form class="bg-dark mt-3" action="error404.html">
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="name" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                aria-describedby="emailHelp"
+                required
+                maxlength="30"
+                minlength="2"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="lastname" class="form-label">Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                aria-describedby="emailHelp"
+                required
+                maxlength="30"
+                minlength="2"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputEmail1" class="form-label"
+                >Correo electronico</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div id="emailHelp" class="form-text">
+                <p class="text-light">
+                  Nunca compartiermos tu información personal con nadie.
+                </p>
+              </div>
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputPassword1" class="form-label"
+                >Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                required
+                maxlength="30"
+                minlength="8"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputPassword1" class="form-label"
+                >Repetir Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                required
+                maxlength="30"
+                minlength="8"
+              />
+            </div>
+            <div class="mb-3 form-check ms-3 col-md-11">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+                required
+              />
+              <label class="form-check-label ms-3" for="exampleCheck1"
+                >Acepto Términos y Condiciones</label
+              >
+            </div>
+            <button
+              type="button"
+              class="btn btn-danger ms-3 mb-3"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+
+            <input
+              type="submit"
+              class="btn btn-primary ms-3 mb-3"
+              value="Enviar"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a
+          class="navbar-brand text-light d-flex align-items-center gap-2"
+          href="../index.html"
+          ><img src="../assets/img/logo.png" class="logo" alt="" />AFA</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item text-light">
+              <a class="nav-link text-light my-1 ms-2" href="../index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item text-light">
+              <a class="nav-link text-light my-1 ms-2" href="nosotros.html"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item text-light">
+              <a class="nav-link text-light my-1 ms-2" href="galeria.html"
+                >Galeria</a
+              >
+            </li>
+            <li class="nav-item text-light">
+              <a class="nav-link text-light my-1 ms-2" href="contacto.html"
+                >Contacto</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light my-1 ms-2" href="login.html"
+                >Login</a
+              >
+            </li>
+            <button
+              type="button"
+              class="btn btn-link text-light ms-2 ms-lg-0 nav-link"
+              data-bs-toggle="modal"
+              data-bs-target="#register"
+            >
+              Registrarse
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="pb-5">
+      <div class="mt-5 container">
+        <p class="frase">
+          <small id="previa">El equipo que...</small> elige creer
+          <small id="previa">...todos los días</small>
+        </p>
+      </div>
+      <section>
+        <div
+          class="m-2 p-2 d-flex justify-content-center mx-auto flex-wrap imagenes-container"
+        >
+          <div
+            class="rota"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModalp1"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item text-light">
-                <a class="nav-link text-light" aria-current="page" href="#"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="pages/galeria.html"
-                  >Galeria</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="./pages/blog1978.html"
-                  >1978</a
-                >
-              </li>
-            </ul>
+            <img
+              src="../assets/img/devs/mariano.jpeg"
+              class="foto m-4 border border-1 img-fluid rounded-circle"
+              alt="persona1"
+            />
+            <p class="fs-2 nombre lh-1">Mariano Achi</p>
+          </div>
+          <div
+            class="rota"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModalp2"
+          >
+            <img
+              src="../assets/img/devs/rocio.jpeg"
+              class="foto m-4 border border-1 img-fluid rounded-circle"
+              alt="..."
+            />
+            <p class="fs-2 nombre lh-1">Rocio Hernandez</p>
+          </div>
+          <div
+            class="rota"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModalp3"
+          >
+            <img
+              src="../assets/img/devs/lucas.png"
+              class="foto m-4 border border-1 img-fluid rounded-circle"
+              alt="..."
+            />
+            <p class="fs-2 nombre lh-1">Lucas Gonzalez</p>
+          </div>
+          <div
+            class="rota"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModalp4"
+          >
+            <img
+              src="../assets/img/devs/ignacio.jpeg"
+              class="foto m-4 border border-1 img-fluid rounded-circle"
+              alt="..."
+            />
+            <p class="fs-2 nombre lh-1">Ignacio Brandan</p>
+          </div>
+          <div
+            class="rota"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModalp5"
+          >
+            <img
+              src="../assets/img/devs/giselle.png"
+              class="foto m-4 border border-1 img-fluid rounded-circle"
+              alt="..."
+            />
+            <p class="fs-2 nombre lh-1">Giselle Alvarez</p>
+          </div>
+          <div
+            class="rota"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModalp6"
+          >
+            <img
+              src="../assets/img/devs/luz.png"
+              class="foto m-4 border border-1 img-fluid rounded-circle"
+              alt="..."
+            />
+            <p class="fs-2 nombre lh-1">Luz Villafañe</p>
           </div>
         </div>
-      </nav>
-    </header>
-    <main></main>
-    <footer class="mt-5 bg-dark text-light py-5 mt-auto">
-      <div class="container">
-        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
-          </article>
-        </section>
+      </section>
+      <div
+        class="modal fade"
+        id="exampleModalp1"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="fs-5 nombremod" id="exampleModalLabel">
+                Mariano Achi
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="fotomodal container">
+                <img
+                  src="../assets/img/devs/mariano.jpeg"
+                  class="m-2 img-fluid"
+                  alt="persona1"
+                />
+              </div>
+              <p class="textomod">
+                Mariano tiene 21 años, está trabajando y al mismo tiempo hace el
+                curso de Rolling Code. Llego a la school por recomendación de
+                dos amigos.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+      <div
+        class="modal fade"
+        id="exampleModalp2"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="fs-5 nombremod" id="exampleModalLabel">
+                Rocío Hernandez
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="fotomodal container">
+                <img
+                  src="../assets/img/devs/rocio.jpeg"
+                  class="m-2 img-fluid"
+                  alt="persona1"
+                />
+              </div>
+              <p class="textomod">
+                <br />
+                Rocío tiene 24 años. Actualmente trabaja de secretaría
+                administrativa. Encontró Rolling por las becas, al no quedar fue
+                a reuniones, y le gustó mucho. Venía averiguando lugares, dió
+                con ésta escuela y se inscribió. En su tiempo libre le gusta
+                prepararse unos buenos mates, super importante amargos... y
+                hacer sus cosas pendientes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModalp3"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="fs-5 nombremod" id="exampleModalLabel">
+                Lucas Gonzalez
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="fotomodal container">
+                <img
+                  src="../assets/img/devs/lucas.png"
+                  class="m-2 img-fluid"
+                  alt="persona1"
+                />
+              </div>
+              <p class="textomod">
+                <br />
+                Lucas tiene 21 años. Estudió la carrera de Ing informática. El
+                curso le parece muy interesante, le gustan los temas de estudio
+                y los profes son re copados. Llegó por recomendación de unos
+                compañeros de la facultad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModalp4"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="fs-5 nombremod" id="exampleModalLabel">
+                Ignacio Brandan
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="fotomodal container">
+                <img
+                  src="../assets/img/devs/ignacio.jpeg"
+                  class="m-2 img-fluid"
+                  alt="persona1"
+                />
+              </div>
+              <p class="textomod">
+                <br />
+                Ignacio tiene 19 años. Estudia en la UNT la carrera de
+                programador universitario. Le gustaba la carrera de fullstack y
+                no la encontraba en Tucuman, hasta que se enteró de Rolling
+                Code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModalp5"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="fs-5 nombremod" id="exampleModalLabel">
+                Giselle Alvarez
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="fotomodal container">
+                <img
+                  src="../assets/img/devs/giselle.png"
+                  class="m-2 img-fluid"
+                  alt="persona1"
+                />
+              </div>
+              <p class="textomod">
+                <br />
+                Giselle tiene 28 años. Es recepcionista de hotel gea. Y está
+                haciendo la Tec. de desarrollo de software. Se inscribió en
+                rolling porque se lo recomendaron y ya venía investigando para
+                hacer algún curso sobre programación! Intentó en otros lugares,
+                pero le consumían mucho tiempo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModalp6"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="fs-5 nombremod" id="exampleModalLabel">
+                Luz Villafañe
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="fotomodal container">
+                <img
+                  src="../assets/img/devs/luz.png"
+                  class="m-2 img-fluid"
+                  alt="persona1"
+                />
+              </div>
+              <p class="textomod">
+                <br />
+                Luz tiene 27 años, está haciendo su tesis de la Licenciatura en
+                Economía, le da mucha curiosidad el mundo de la programación y
+                Rolling Code le pareció el lugar más adecuado para incursionar
+                en el tema. Si bien al principio buscaba un curso de datos,
+                desarrollo web la esta sorprendiendo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-auto text-light pt-5 pb-5 bg-dark">
+      <section class="container">
+        <article class="row">
+          <article class="col-12 col-md-4 text-center">
+            <a href="index.html" class="link-light tex-tecoration-none">
+              <img src="../assets/img/logoAfa.png" alt="" class="logoAfa" />
+            </a>
+          </article>
+          <article class="col-12 col-md-4 text-center pt-3">
+            <h5 class="mb-3 fs-3">Seguinos en nuestras redes</h5>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-instagram fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-facebook fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-youtube fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-twitter fs-2 text-light p-1"></i>
+            </a>
+          </article>
+          <article class="col-12 col-md-4 pt-2 pt-lg-3">
+            <div class="fs-5 d-flex flex-column align-items-center gap-3">
+              <a href="blog2022.html" class="text-decoration-none text-light"
+                >Qatar 2022</a
+              >
+              <a href="blog1986.html" class="text-decoration-none text-light"
+                >Mexico 1986</a
+              >
+              <a href="blog1978.html" class="text-decoration-none text-light"
+                >Argentina 1978</a
+              >
+            </div>
+          </article>
+        </article>
+      </section>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/c70ff35609.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

@@ -1,26 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap");
-
-body {
-  background: linear-gradient(90deg, #011a3e 10%, #376c9f 90%);
-  color: #f2f2f2;
-  font-family: "Raleway", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-figcaption {
-  font-family: "Staatliches", cursive;
-}
-
-/* Galeria */
-.galeria-img {
-  cursor: pointer;
-}
-
 /* Entrada de Blog */
 
 iframe {

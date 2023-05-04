@@ -17,45 +17,176 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
   </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container">
-          <a class="navbar-brand text-light" href="../index.html">Navbar</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icono"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item text-light">
-                <a
-                  class="nav-link text-light"
-                  aria-current="page"
-                  href="../index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="galeria.html">Galeria</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="blog1978.html">1978</a>
-              </li>
-            </ul>
+  <body class="d-flex flex-column min-vh-100">
+    <div class="modal text-light" tabindex="-1" id="register">
+      <div class="modal-dialog">
+        <div class="modal-content p-3 bg-dark">
+          <div class="modal-header borderModal">
+            <h5 class="modal-title">Registrarse</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
+          <form class="bg-dark mt-3" action="error404.html">
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="name" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                aria-describedby="emailHelp"
+                required
+                maxlength="30"
+                minlength="2"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="lastname" class="form-label">Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                aria-describedby="emailHelp"
+                required
+                maxlength="30"
+                minlength="2"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputEmail1" class="form-label"
+                >Correo electronico</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div id="emailHelp" class="form-text">
+                <p class="text-light">
+                  Nunca compartiermos tu información personal con nadie.
+                </p>
+              </div>
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputPassword1" class="form-label"
+                >Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                required
+                maxlength="30"
+                minlength="8"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputPassword1" class="form-label"
+                >Repetir Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                required
+                maxlength="30"
+                minlength="8"
+              />
+            </div>
+            <div class="mb-3 form-check ms-3 col-md-11">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+                required
+              />
+              <label class="form-check-label ms-3" for="exampleCheck1"
+                >Acepto Términos y Condiciones</label
+              >
+            </div>
+            <button
+              type="button"
+              class="btn btn-danger ms-3 mb-3"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+
+            <input
+              type="submit"
+              class="btn btn-primary ms-3 mb-3"
+              value="Enviar"
+            />
+          </form>
         </div>
-      </nav>
-    </header>
+      </div>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a
+          class="navbar-brand text-light d-flex align-items-center gap-2"
+          href="../index.html"
+          ><img src="../assets/img/logo.png" class="logo" alt="" />AFA</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item text-light">
+              <a class="nav-link text-light my-1 ms-2" href="../index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item text-light">
+              <a class="nav-link text-light my-1 ms-2" href="nosotros.html"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item text-light">
+              <a class="nav-link text-light my-1 ms-2" href="galeria.html"
+                >Galeria</a
+              >
+            </li>
+            <li class="nav-item text-light">
+              <a class="nav-link text-light my-1 ms-2" href="contacto.html"
+                >Contacto</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light my-1 ms-2" href="login.html"
+                >Login</a
+              >
+            </li>
+            <button
+              type="button"
+              class="btn btn-link text-light ms-2 ms-lg-0 nav-link"
+              data-bs-toggle="modal"
+              data-bs-target="#register"
+            >
+              Registrarse
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <main class="pt-5">
       <div class="container">
         <section class="d-flex flex-column align-items-center text-center">
@@ -73,64 +204,28 @@
             <article class="row row-cols-md-2 row-cols-lg-3">
               <article class="d-flex flex-column p-lg-0 my-2">
                 <img
-                  src="https://pbs.twimg.com/media/Dii9sATW0AAEVT6?format=jpg&name=4096x4096"
-                  alt=" Estadio Jose Amalfitani"
+                  src="https://www.clarin.com/img/2022/08/02/en-el-estadio-lusail-el___Ekv1SCVd0_2000x1500__1.jpg"
+                  alt=" Estadio Lusail"
                   class="sede-img rounded-top"
                 />
-                <p class="m-0 bg-dark sede-desc">Estadio Jose Amalfitani</p>
+                <p class="m-0 bg-dark sede-desc">Estadio Lusail</p>
               </article>
               <article class="d-flex flex-column p-lg-0 my-2">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Estadio_Monumental_Mundial_78.jpg/800px-Estadio_Monumental_Mundial_78.jpg"
-                  alt="Estadio Monumental"
+                  src="https://media.tycsports.com/files/2022/07/29/458654/estadio-974-gettyimages_862x485.webp?v=1"
+                  alt="Estadio 974"
                   class="sede-img rounded-top"
                 />
-                <p class="m-0 bg-dark sede-desc">
-                  Estadio Monumental <br />
-                  (Actualmente: Mas Monumetal)
-                </p>
+                <p class="m-0 bg-dark sede-desc">Estadio 974, Doha<br /></p>
               </article>
               <article class="d-flex flex-column p-lg-0 my-2">
                 <img
-                  src="https://academia.r.worldssl.net/addons/default/modules/stats/img/venues/600/979.webp"
-                  alt="Estadio Ciudad de Mendoza"
+                  src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/12/02/16069148947188.png"
+                  alt="Estadio Rayan"
                   class="sede-img rounded-top"
                 />
-                <p class="m-0 bg-dark sede-desc">
-                  Estadio Ciudad de Mendoza <br />(Actualmente: Malvinas
-                  Argentinas)
-                </p>
+                <p class="m-0 bg-dark sede-desc">Estadio Rayán <br /></p>
                 <p></p>
-              </article>
-              <article class="d-flex flex-column p-lg-0 my-2">
-                <img
-                  src="https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2022/05/16/chato.jpg?itok=Rv6efps1"
-                  alt="Estadio Chateau Carreras"
-                  class="sede-img rounded-top"
-                />
-                <p class="m-0 bg-dark sede-desc">
-                  Estadio Chateau Carreras <br />
-                  (Actualmente: Mario Alberto Kempes)
-                </p>
-              </article>
-              <article class="d-flex flex-column p-lg-0 my-2">
-                <img
-                  src="https://www.noticiasgratis.com/wp-content/uploads/2019/05/Mendoza-Estadio-Jos%C3%A9-Mar%C3%ADa-Minella.jpg"
-                  class="sede-img rounded-top"
-                  alt="Estadio Mundialista de Mar del Plata"
-                />
-                <p class="m-0 bg-dark sede-desc">
-                  Estadio Mundialista Mar del Plata<br />
-                  (Actualmente: Jose Maria Minella)
-                </p>
-              </article>
-              <article class="d-flex flex-column p-lg-0 my-2">
-                <img
-                  src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/dc/1b/1b/estadio-gigante-de-arroyito.jpg?w=1200&h=-1&s=1"
-                  alt="Estadio Gigante de Arroyito"
-                  class="sede-img rounded-top"
-                />
-                <p class="m-0 bg-dark sede-desc">Estadio Gigante de Arroyito</p>
               </article>
             </article>
           </article>
@@ -141,23 +236,22 @@
               <h3>Mascota</h3>
               <figure>
                 <img
-                  src="https://i.pinimg.com/originals/8f/53/24/8f5324ae711e904322286d6545acb0d6.png"
-                  alt="Gauchito, mascota del mundial de 1978"
+                  src="https://static.vecteezy.com/system/resources/previews/014/615/735/non_2x/mascot-fifa-world-cup-qatar-2022-official-logo-mondial-champion-symbol-design-abstract-illustration-free-vector.jpg"
+                  alt="la'ebb, mascota del mundial 2022"
                   class="bg-light simbolo-img mb-3 rounded"
                 />
-                <figcaption class="fs-4">"Gauchito"</figcaption>
+                <figcaption class="fs-4">"La'ebb"</figcaption>
               </figure>
             </article>
-            <p></p>
             <article>
               <h3>Balon</h3>
               <figure>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/0/09/TANGO_MUNDIAL_78.jpg"
-                  alt="Adidas Tango, balon del mundial de 1978"
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/25/Al-Rihla_%28cropped%29.jpg"
+                  alt="Adidas Al Rihla., balon del mundial 2022"
                   class="simbolo-img mb-3 rounded"
                 />
-                <figcaption class="fs-4">Adidas Tango</figcaption>
+                <figcaption class="fs-4">Adidas Al Rihla.</figcaption>
               </figure>
               <p></p>
             </article>
@@ -167,22 +261,22 @@
         <section class="pb-lg-5">
           <h2 class="my-5 text-center">Camino de la Selección Argentina</h2>
           <article class="row justify-content-center">
-            <div class="col-12 col-lg-6">
-              <h3 class="my-4 text-center">Primera Fase</h3>
+            <div class="col-12">
+              <h3 class="text-center">Fase de Grupos</h3>
               <article
                 class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
               >
                 <img
-                  src="../assets/images/flags/argentina.png"
+                  src="../assets/img/flags/argentina.png"
                   alt=" Bandera de Argentina"
                   class="icono"
                 />
                 <p class="m-0">Argentina</p>
-                <p class="m-0">2 - 1</p>
-                <p class="m-0">Hungría</p>
+                <p class="m-0">1 - 2</p>
+                <p class="m-0">Arabia Saudita</p>
                 <img
-                  src="../assets/images/flags/hungria.png"
-                  alt=" Bandera de Hungría"
+                  src="../assets/img/flags/arabia-saudita.png"
+                  alt=" Bandera de Arabia Saudita"
                   class="icono"
                 />
               </article>
@@ -190,108 +284,112 @@
                 class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
               >
                 <img
-                  src="../assets/images/flags/argentina.png"
-                  alt=" Bandera de Argentina"
-                  class="icono"
-                />
-                <p class="m-0">Argentina</p>
-                <p class="m-0">2 - 1</p>
-                <p class="m-0">Francia</p>
-                <img
-                  src="../assets/images/flags/francia.png"
-                  alt=" Bandera de Francia"
-                  class="icono"
-                />
-              </article>
-              <article
-                class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
-              >
-                <img
-                  src="../assets/images/flags/italia.png"
-                  alt=" Bandera de Italia"
-                  class="icono"
-                />
-                <p class="m-0">Italia</p>
-                <p class="m-0">1 - 0</p>
-                <p class="m-0">Argentina</p>
-                <img
-                  src="../assets/images/flags/argentina.png"
-                  alt=" Bandera de Argentina"
-                  class="icono"
-                />
-              </article>
-            </div>
-            <div class="col-12 col-lg-6">
-              <h3 class="my-4 text-center">Segunda Fase</h3>
-              <article
-                class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
-              >
-                <img
-                  src="../assets/images/flags/argentina.png"
+                  src="../assets/img/flags/argentina.png"
                   alt=" Bandera de Argentina"
                   class="icono"
                 />
                 <p class="m-0">Argentina</p>
                 <p class="m-0">2 - 0</p>
+                <p class="m-0">Mexico</p>
+                <img
+                  src="../assets/img/flags/mexico.png"
+                  alt=" Bandera de Mexico"
+                  class="icono"
+                />
+              </article>
+              <article
+                class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
+              >
+                <img
+                  src="../assets/img/flags/polonia.png"
+                  alt=" Bandera de polonia"
+                  class="icono"
+                />
                 <p class="m-0">Polonia</p>
-
-                <img
-                  src="../assets/images/flags/polonia.png"
-                  alt=" Bandera de Polonia"
-                  class="icono"
-                />
-              </article>
-              <article
-                class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
-              >
-                <img
-                  src="../assets/images/flags/argentina.png"
-                  alt=" Bandera de Argentina"
-                  class="icono"
-                />
+                <p class="m-0">0 - 2</p>
                 <p class="m-0">Argentina</p>
-                <p class="m-0">0 - 0</p>
-                <p class="m-0">Brasil</p>
                 <img
-                  src="../assets/images/flags/brasil.png"
-                  alt=" Bandera de Brasil"
-                  class="icono"
-                />
-              </article>
-              <article
-                class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
-              >
-                <img
-                  src="../assets/images/flags/argentina.png"
+                  src="../assets/img/flags/argentina.png"
                   alt=" Bandera de Argentina"
-                  class="icono"
-                />
-                <p class="m-0">Argentina</p>
-                <p class="m-0">6 - 0</p>
-                <p class="m-0">Peru</p>
-                <img
-                  src="../assets/images/flags/peru.png"
-                  alt=" Bandera de Peru"
                   class="icono"
                 />
               </article>
             </div>
-            <div class="col-12 col-lg-6">
-              <h3 class="my-4 text-center">Final</h3>
+            <div class="col-12">
+              <h3 class="my-4 text-center">Octavos de Final</h3>
               <article
                 class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
               >
                 <img
-                  src="../assets/images/flags/argentina.png"
+                  src="../assets/img/flags/argentina.png"
                   alt=" Bandera de Argentina"
                   class="icono"
                 />
                 <p class="m-0">Argentina</p>
-                <p class="m-0">3 - 1</p>
-                <p class="m-0">Paises Bajos</p>
+                <p class="m-0">2 - 1</p>
+                <p class="m-0">Australia</p>
 
                 <img
-                  src="../assets/images/flags/paises-bajos.png"
+                  src="../assets/img/flags/australia.png"
+                  alt=" Bandera de Australia"
+                  class="icono"
+                />
+              </article>
+              <h3 class="my-4 text-center">Cuartos de Final</h3>
+
+              <article
+                class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
+              >
+                <img
+                  src="../assets/img/flags/paises-bajos.png"
+                  alt=" Bandera de paises-bajos"
+                  class="icono"
+                />
+                <p class="m-0">Paises Bajos</p>
+                <p class="m-0">(4) 2 - 2 (3)</p>
+                <p class="m-0">Argentina</p>
+                <img
+                  src="../assets/img/flags/argentina.png"
+                  alt=" Bandera de argentina"
+                  class="icono"
+                />
+              </article>
+              <h3 class="my-4 text-center">SemiFinal</h3>
+
+              <article
+                class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3 my-5"
+              >
+                <img
+                  src="../assets/img/flags/argentina.png"
+                  alt=" Bandera de Argentina"
+                  class="icono"
+                />
+                <p class="m-0">Argentina</p>
+                <p class="m-0">3 - 0</p>
+                <p class="m-0">Croacia</p>
+                <img
+                  src="../assets/img/flags/croacia.png"
+                  alt=" Bandera de croacia"
+                  class="icono"
+                />
+              </article>
+            </div>
+            <div class="col-12">
+              <h3 class="my-4 text-center">Final</h3>
+              <article
+                class="d-flex gap-3 flex-column flex-md-row align-items-center justify-content-center fs-3"
+              >
+                <img
+                  src="../assets/img/flags/argentina.png"
+                  alt=" Bandera de Argentina"
+                  class="icono"
+                />
+                <p class="m-0">Argentina</p>
+                <p class="m-0">(4) 3 - 3 (2)</p>
+                <p class="m-0">Francia</p>
+
+                <img
+                  src="../assets/img/flags/francia.png"
                   alt="Bandera de Paises Bajos"
                   class="icono"
                 />
@@ -306,51 +404,53 @@
           >
             <div class="card premio p-0">
               <img
-                src="https://www.biografiasyvidas.com/biografia/k/fotos/kempes.jpg"
+                src="../assets/img/messi-premio.jpg"
                 class="card-img-top"
                 alt="Mario Alberto Kempes con la camiseta Argentina en el mundial de 1978"
               />
               <div class="card-body text-center">
-                <h5 class="card-title">Mario Alberto Kempes</h5>
+                <h5 class="card-title">lionel andres messi</h5>
                 <p class="card-text">
                   Premiado como el mejor jugador del mundial
                 </p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">6 Goles</li>
-                <li class="list-group-item">0 Asistencias</li>
+                <li class="list-group-item">7 Goles</li>
+                <li class="list-group-item">8 Asistencias</li>
               </ul>
             </div>
             <div class="card premio p-0">
               <img
-                src="https://p2k.unkris.ac.id/_sepakbola/_baca_gambar_pengantar.php?kodegb=1978-Antonio-Cabrini-Italia-1-B.jpg&tahun=1978"
+                src="../assets/img/enzo-premio.jpg"
                 class="card-img-top"
                 alt="Antonio Cabrini con la camiseta Italiana en el mundial de 1978"
               />
               <div class="card-body text-center">
-                <h5 class="card-title">Antonio Cabrini</h5>
+                <h5 class="card-title">Enzo Jeremías Fernández</h5>
                 <p class="card-text">
                   Reconocido como el mejor jugador joven del mundial
                 </p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">0 Goles</li>
-                <li class="list-group-item">0 Asistencias</li>
+                <li class="list-group-item">1 Goles</li>
+                <li class="list-group-item">2 Asistencias</li>
               </ul>
             </div>
             <div class="card premio p-0">
               <img
-                src="../assets/images/afa.png"
+                src="https://www.directvsports.com/__export/1675278496539/sites/dsports/img/2023/02/01/20230201_040815920_24feb1b1-102b-4943-b399-933680909e1a.jpg_462530703.jpg"
                 class="card-img-top bg-light"
                 alt="Escudo de la Seleccion Argentina de 1978"
               />
               <div class="card-body text-center">
-                <h5 class="card-title">Selección Argentina</h5>
-                <p class="card-text">Recibió el Premio FIFA al Juego Limpio</p>
+                <h5 class="card-title">Damián Emiliano Martínez</h5>
+                <p class="card-text">
+                  Recibió el Premio al mejor arquero del mundial
+                </p>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">7 Partidos Jugados</li>
-                <li class="list-group-item">5 Amonestaciones</li>
+                <li class="list-group-item">0 Amonestaciones</li>
               </ul>
             </div>
           </article>
@@ -362,7 +462,7 @@
           >
             <div class="bg-light p-2 rounded-circle">
               <img
-                src="../assets/images/user.png"
+                src="../assets/img/user.png"
                 alt="Avatar de usuario"
                 class="icono"
               />
@@ -380,7 +480,7 @@
           >
             <div class="bg-light p-2 rounded-circle">
               <img
-                src="../assets/images/user.png"
+                src="../assets/img/user.png"
                 alt="Avatar de usuario"
                 class="icono"
               />
@@ -398,7 +498,7 @@
           >
             <div class="bg-light p-2 rounded-circle">
               <img
-                src="../assets/images/user.png"
+                src="../assets/img/user.png"
                 alt="Avatar de usuario"
                 class="icono"
               />
@@ -416,7 +516,7 @@
           >
             <div class="bg-light p-2 rounded-circle">
               <img
-                src="../assets/images/user.png"
+                src="../assets/img/user.png"
                 alt="Avatar de usuario"
                 class="icono"
               />
@@ -434,7 +534,7 @@
           >
             <div class="bg-light p-2 rounded-circle">
               <img
-                src="../assets/images/user.png"
+                src="../assets/img/user.png"
                 alt="Avatar de usuario"
                 class="icono"
               />
@@ -452,7 +552,7 @@
           >
             <div class="bg-light p-2 rounded-circle">
               <img
-                src="../assets/images/user.png"
+                src="../assets/img/user.png"
                 alt="Avatar de usuario"
                 class="icono"
               />
@@ -483,36 +583,49 @@
         </section>
       </div>
     </main>
-    <footer class="mt-5 bg-dark text-light py-5">
-      <div class="container">
-        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
+    <footer class="mt-auto text-light pt-5 pb-5 bg-dark">
+      <section class="container">
+        <article class="row">
+          <article class="col-12 col-md-4 text-center">
+            <a href="index.html" class="link-light tex-tecoration-none">
+              <img src="../assets/img/logoAfa.png" alt="" class="logoAfa" />
+            </a>
           </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
+          <article class="col-12 col-md-4 text-center pt-3">
+            <h5 class="mb-3 fs-3">Seguinos en nuestras redes</h5>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-instagram fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-facebook fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-youtube fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-twitter fs-2 text-light p-1"></i>
+            </a>
           </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
+          <article class="col-12 col-md-4 pt-2 pt-lg-3">
+            <div class="fs-5 d-flex flex-column align-items-center gap-3">
+              <a href="blog2022.html" class="text-decoration-none text-light"
+                >Qatar 2022</a
+              >
+              <a href="blog1986.html" class="text-decoration-none text-light"
+                >Mexico 1986</a
+              >
+              <a href="blog1978.html" class="text-decoration-none text-light"
+                >Argentina 1978</a
+              >
+            </div>
           </article>
-        </section>
-      </div>
+        </article>
+      </section>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/c70ff35609.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

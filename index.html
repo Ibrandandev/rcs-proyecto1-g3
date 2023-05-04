@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,77 +14,440 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/globals.css" />
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body class="d-flex flex-column vh-100">
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container">
-          <a class="navbar-brand text-light" href="index.html">Navbar</a>
+    <div class="modal text-light" tabindex="-1" id="register">
+      <div class="modal-dialog">
+        <div class="modal-content p-3 bg-dark">
+          <div class="modal-header borderModal">
+            <h5 class="modal-title">Registrarse</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form class="bg-dark mt-3" action="error404.html">
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="name" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                aria-describedby="emailHelp"
+                required
+                maxlength="30"
+                minlength="2"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="lastname" class="form-label">Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                aria-describedby="emailHelp"
+                required
+                maxlength="30"
+                minlength="2"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputEmail1" class="form-label"
+                >Correo electronico</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div id="emailHelp" class="form-text">
+                <p class="text-light">
+                  Nunca compartiermos tu información personal con nadie.
+                </p>
+              </div>
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputPassword1" class="form-label"
+                >Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                required
+                maxlength="30"
+                minlength="8"
+              />
+            </div>
+            <div class="mb-3 ms-3 col-md-11">
+              <label for="exampleInputPassword1" class="form-label"
+                >Repetir Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                required
+                maxlength="30"
+                minlength="8"
+              />
+            </div>
+            <div class="mb-3 form-check ms-3 col-md-11">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+                required
+              />
+              <label class="form-check-label ms-3" for="exampleCheck1"
+                >Acepto Términos y Condiciones</label
+              >
+            </div>
+            <button
+              type="button"
+              class="btn btn-danger ms-3 mb-3"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+
+            <input
+              type="submit"
+              class="btn btn-primary ms-3 mb-3"
+              value="Enviar"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a
+          class="navbar-brand text-light d-flex align-items-center gap-2"
+          href="index.html"
+          ><img src="assets/img/logo.png" class="logo" alt="" />AFA</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item text-light">
+              <a class="nav-link text-light" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item text-light">
+              <a class="nav-link text-light" href="pages/nosotros.html"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="pages/galeria.html"
+                >Galeria</a
+              >
+            </li>
+            <li class="nav-item text-light">
+              <a class="nav-link text-light" href="pages/contacto.html"
+                >contacto</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="pages/login.html">Login</a>
+            </li>
+            <button
+              type="button"
+              class="btn btn-link text-light ms-2 ms-lg-0 nav-link"
+              data-bs-toggle="modal"
+              data-bs-target="#register"
+            >
+              Registrarse
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="seccionCarrousel">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./assets/img/ArgentinaLevantandoLaCopa.jpg"
+                class="imagen-slider d-block w-100 carousel-image"
+                alt="argentina campeon 2022"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/maradona-campeon.jpg"
+                class="imagen-slider d-block w-100 carousel-image"
+                alt="argentina campeon 1986"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/gol78.jpg"
+                class="imagen-slider d-block w-100 carousel-image"
+                alt="argentina campeon 1978"
+              />
+            </div>
+          </div>
           <button
-            class="navbar-toggler"
+            class="carousel-control-prev"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item text-light">
-                <a class="nav-link text-light" aria-current="page" href="#"
-                  >Home</a
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </section>
+      <div class="container mb-5">
+        <h3 class="text-light my-5 titulo text-center">
+          Mundiales ganados por la Selección
+        </h3>
+        <div class="d-flex flex-column flex-md-row justify-content-center">
+          <section class="text-center col-md-9 cardContainer">
+            <div class="card mb-3 bg-dark text-light tarjeta">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/messi-copa.jpg"
+                    class="img-fluid rounded-start w-100 entrada-img"
+                    alt="mundial argentina qatar 2022"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center w-75 align-items-center mx-auto h-100"
+                  >
+                    <h5 class="card-title titulo">Qatar 2022</h5>
+                    <p class="card-text">
+                      Argentina llegó a Qatar 2022 con la confianza por las
+                      nubes, con un funcionamiento confiable y sostenido en el
+                      tiempo, potenciado tras la obtención de la Copa América
+                      2021, el primer título en mayores para la Albiceleste en
+                      casi tres décadas.
+                    </p>
+                    <a
+                      href="pages/blog2022.html"
+                      class="btn btn-primary botonCard"
+                      >Ver Más</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 bg-dark text-light tarjeta">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/maradona-copa.jpg"
+                    class="img-fluid rounded-start w-100 entrada-img"
+                    alt="mundial Argentina Mexico 1986"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center w-75 align-items-center mx-auto h-100"
+                  >
+                    <h5 class="card-title titulo">México 1986</h5>
+                    <p class="card-text">
+                      El Mundial de México 1986 quedó en la memoria por muchas
+                      razones: fue el primero, y hasta la fecha el último, que
+                      la Selección Argentina ganó fuera de casa; el que marcó la
+                      eliminación histórica a Inglaterra, el que catapultó a
+                      Diego Armando Maradona como el mejor del mundo y el del
+                      mejor gol del siglo
+                    </p>
+                    <a
+                      href="pages/blog1986.html"
+                      class="btn btn-primary botonCard"
+                      >Ver Más</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 bg-dark text-light tarjeta">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/passarela-copa.jpg"
+                    class="img-fluid rounded-start w-100 entrada-img"
+                    alt="mundial Argentina 1978"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center w-75 align-items-center mx-auto h-100"
+                  >
+                    <h5 class="card-title titulo">Argentina 1978</h5>
+                    <p class="card-text">
+                      La selección argentina logró su primer título en el
+                      Mundial 1978, al que llegó como uno de los máximos
+                      candidatos. El camino no fue fácil, con una primera ronda
+                      que presentó rivales de jerarquía y obligó a la Argentina
+                      a cambiar los planes tras perder contra Italia.
+                    </p>
+                    <a
+                      href="pages/blog1978.html"
+                      class="btn btn-primary botonCard"
+                      >Ver Más</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="d-flex justify-content-center">
+              <ul class="pagination pagination-sm">
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link pag-button">1</span>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="pages/error404.html">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="pages/error404.html">3</a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+          <aside class="publicidad ps-md-3">
+            <form
+              class="d-flex mt-2"
+              role="search"
+              action="pages/error404.html"
+            >
+              <input
+                class="form-control me-2 botonBuscador"
+                type="search"
+                placeholder="Buscar"
+                aria-label="search"
+                required
+              />
+              <button class="btn btn-dark" type="submit">Buscar</button>
+            </form>
+            <ul class="list-group list-group-flush mt-3">
+              <li class="list-group-item">
+                <a href="pages/blog2022.html" class="text-decoration-none"
+                  >Lionel Andres Messi</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="pages/galeria.html"
-                  >Galeria</a
+              <li class="list-group-item">
+                <a href="pages/blog1986.html" class="text-decoration-none"
+                  >Diego Armando Maradona</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="./pages/blog1978.html"
-                  >1978</a
+              <li class="list-group-item">
+                <a href="pages/blog1978.html" class="text-decoration-none"
+                  >Mario Alberto Kempes</a
                 >
               </li>
             </ul>
-          </div>
+            <img
+              src="./assets/img/publicidad2030.jpg"
+              alt="Mundial 2030"
+              class="imagenPublicidad mt-3 w-100 d-none d-md-block"
+            />
+          </aside>
         </div>
-      </nav>
-    </header>
-    <main></main>
-    <footer class="mt-5 bg-dark text-light py-5 mt-auto">
-      <div class="container">
-        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
-          </article>
-          <article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              doloribus tempora sit consequatur! Deleniti rem eius eum
-              asperiores accusantium provident debitis voluptate quaerat, cum
-              fugit dicta commodi sint suscipit nobis.
-            </p>
-          </article>
-        </section>
       </div>
+    </main>
+    <footer class="text-light pt-5 pb-5 bg-dark">
+      <section class="container">
+        <article class="row">
+          <article class="col-12 col-md-4 text-center">
+            <a href="index.html" class="link-light tex-tecoration-none">
+              <img src="./assets/img/logoAfa.png" alt="" class="logoAfa" />
+            </a>
+          </article>
+          <article class="col-12 col-md-4 text-center pt-3">
+            <h5 class="mb-3 fs-3">Seguinos en nuestras redes</h5>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-instagram fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-facebook fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-youtube fs-2 text-light p-1"></i>
+            </a>
+            <a href="pages/error404.html" class="text-decoration-none">
+              <i class="fa-brands fa-twitter fs-2 text-light p-1"></i>
+            </a>
+          </article>
+          <article class="col-12 col-md-4 pt-2 pt-lg-3">
+            <div class="fs-5 d-flex flex-column align-items-center gap-3">
+              <a
+                href="pages/blog2022.html"
+                class="text-decoration-none text-light"
+                >Qatar 2022</a
+              >
+              <a
+                href="pages/blog1986.html"
+                class="text-decoration-none text-light"
+                >Mexico 1986</a
+              >
+              <a
+                href="pages/blog1978.html"
+                class="text-decoration-none text-light"
+                >Argentina 1978</a
+              >
+            </div>
+          </article>
+        </article>
+      </section>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/c70ff35609.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

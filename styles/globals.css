@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap");
+
+body {
+  background: linear-gradient(90deg, #011a3e 10%, #376c9f 90%);
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figcaption {
+  font-family: "Staatliches", cursive;
+}
+
+/* Nav */
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Footer */
+
+.logoAfa {
+  width: 120px;
+  height: 170px;
+}

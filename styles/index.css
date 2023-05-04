@@ -1,0 +1,46 @@
+.carousel img {
+  height: 320px;
+}
+
+.cardContainer {
+  width: 100%;
+}
+
+.publicidad {
+  width: 100%;
+}
+
+.entrada-img {
+  height: 400px;
+}
+
+.botonCard {
+  background-color: #011a3e;
+  border: none;
+}
+
+.botonCard:hover {
+  background-color: #122a3e;
+}
+
+@media (min-width: 768px) {
+  .publicidad {
+    width: 35%;
+  }
+  .cardContainer {
+    width: 65%;
+  }
+  .carousel {
+    max-height: 80vw;
+  }
+
+  .entrada-img {
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel img {
+    height: 600px;
+  }
+}

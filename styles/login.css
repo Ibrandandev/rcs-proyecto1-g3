@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap");
+.color {
+  background: linear-gradient(90deg, #011a3e 10%, #376c9f 90%);
+  color: #f2f2f2;
+  color: #d9e9ea;
+  margin: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figcaption {
+  font-family: "Staatliches", cursive;
+}
+
+.img img {
+  width: 350px;
+  height: 500px;
+}
+/* .P {
+  background-color: #376c9f;
+}
+.PP {
+  background-color: #376c9f;
+} */
+.login {
+  width: 310px;
+}
+
+.modal1 {
+  margin: 20px;
+  color: black;
+}
+
+.btn {
+  text-align: center;
+  width: auto;
+}
