@@ -15,17 +15,15 @@
 .nombre {
   text-align: center;
   color: #d9e9ea;
-  font-family: "Raleway", sans-serif;
 }
 
 .imagenes-container {
   max-width: 1200px;
 }
 
-#previa {
-  text-align: center;
+.previa {
   color: #d9e9ea;
-  font-size: 60%;
+  font-size: 2.2rem;
 }
 
 .frase {
@@ -42,8 +40,4 @@
 .fotomodal {
   width: 20rem;
   align-items: center;
-}
-
-.textomod {
-  text-align: center;
 }
