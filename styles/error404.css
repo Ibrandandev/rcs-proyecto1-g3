@@ -2,10 +2,15 @@
   color: #d9e9ea;
 }
 
+.img-error {
+  width: 300px;
+  height: 300px;
+  border-color: #d9e9ea;
+}
+
 @media screen and (min-width: 768px) {
   .img-error {
     width: 350px;
     height: 350px;
-    border-color: #d9e9ea;
   }
 }
