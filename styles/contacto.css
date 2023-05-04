@@ -1,5 +1,5 @@
 .portada img {
-  height: 600px;
+  height: 300px;
 }
 
 .form-contacto {
@@ -7,6 +7,25 @@
 }
 
 .mapa-contacto {
-  width: 500px;
-  height: 500px;
+  width: 310px;
+  height: 310px;
+}
+
+@media screen and (min-width: 768px) {
+  .portada img {
+    height: 400px;
+  }
+  .form-contacto {
+    width: 400px;
+  }
+  .mapa-contacto {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .portada img {
+    height: 600px;
+  }
 }
