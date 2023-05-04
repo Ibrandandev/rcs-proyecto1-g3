@@ -1,19 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap");
-
-/* #fondo{
-    background-color: indigo-900;
-} */
-
-/* Fotos */
 .foto {
   width: 14rem;
 }
-
-/* .foto:hover{
-    transition: 1200ms ease-in-out;
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-} */
 
 .rota {
   cursor: pointer;
@@ -25,7 +12,6 @@
   transform: rotateY(360deg);
 }
 
-/* Texto pie imagen */
 .nombre {
   text-align: center;
   color: #d9e9ea;
@@ -36,11 +22,9 @@
   max-width: 1200px;
 }
 
-/* Texto Titulo */
 #previa {
   text-align: center;
   color: #d9e9ea;
-  /* font-family: 'Raleway', sans-serif; */
   font-size: 60%;
 }
 
@@ -55,7 +39,6 @@
   color: #d9e9ea;
 }
 
-/* Modal */
 .fotomodal {
   width: 20rem;
   align-items: center;

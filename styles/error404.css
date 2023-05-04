@@ -1,13 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap");
-
-.body {
-  background: linear-gradient(90deg, #011a3e 10%, #376c9f 90%);
-  margin: 10px;
-}
-
 .textoerror {
   color: #d9e9ea;
-  /* font-family: 'Raleway', sans-serif; */
 }
 
 @media screen and (min-width: 768px) {

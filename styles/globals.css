@@ -16,8 +16,6 @@ figcaption {
   font-family: "Staatliches", cursive;
 }
 
-/* Nav */
-
 .nav-link:hover {
   text-decoration: underline;
 }
@@ -26,8 +24,6 @@ figcaption {
   width: 4rem;
   height: 4rem;
 }
-
-/* Footer */
 
 .logoAfa {
   width: 120px;
